@@ -1,46 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-</head>
-<body>
-        <h2>
-                Plugwalk
-            </h2>
-        <section class="hero-section set-bg" data-setbg="img/bg.jpg" >
-            <div class="container">
-                <div class="hero-slider owl-carousel">
-                    <!-- slider item -->
-                    <div class="hs-item">
-                        <div class="hs-content text-white">
-                            <h2>Plugwalk</h2>
-                            <a href="#" class="site-btn sb-big">Raffles</a>
-                        </div>
-                        <div class="hs-preview set-bg" data-setbg="img/unionj1.jpg"></div>
-                    </div>
-                    <!-- slider item -->
-                    <div class="hs-item">
-                        <div class="hs-content text-white">
-                            <h2>Be bold.<br>Be beautiful.</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
-                            <a href="#" class="site-btn sb-big">See Offers</a>
-                        </div>
-                        <div class="hs-preview set-bg" data-setbg="img/hero-slider/1.jpg"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-    <div class="container-fluid" style="background:#EBF4EC"></div>
+<head>
+  <meta charset="utf-8">
+  <title>FrontendOK</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <!-- HEADER-->
+  <header>
+    <div class="container-fluid">
+      <section class="main row">
+        <article class="col-md-12">
+          <span class="glyphicon glyphicon-ok"></span> Bienvenidos, echa un vistazo y no dudes en preguntarnos, estamos
+          para ayudarte.
+        </article>
+        <div id="header" class="col-md-12">
+            <article class="col-md-2 col-md-offset-1">
+                  <h1>Plugwalk</h1> 
+              </article>
+              <div id="botonesheader">
+                  <article class="col-md-6 col-md-offset-1">
+                      <div class="btn-group-lg">
+                        <button class="btn btn-default">News</button>
+                        <button class="btn btn-default col-md-offset-1">Drops</button>
+                        <button class="btn btn-default col-md-offset-1">Raflles</button>
+                        <button class="btn btn-default col-md-offset-1">Proxy</button>
+                      </div>
+                    </article>
+              </div>
+              <article class="col-md 1">
+                <span class="glyphicon glyphicon-user"><a routerLink="">Inicio Sesión/Registro</a></span>
+              </article>
+        </div>
+      </section>
+    </div>
+  </header>
+  <br/><br/>
+  <!-- Body-->
+  <div class="container">
+            <!--
+          <img class="img-responsive" src="'assets/img/hypebeast.jpg'"  width="460" height="345">
+        -->
+    <section class="main row">
+      <article class="col-sm-12 col-md-8 col-md-offset-2">
+        <img class="img-responsive" [src]="'../../assets/img/hypebeast.jpg'" />
+        <br/><br/>
+        <img class="img-responsive" [src]="'../../assets/img/hypebeast.jpg'" />
+      </article>
+      
+      <article class="col-sm-12 col-md-8 col-md-offset-2">     
+      </article>
+    </section>
+  </div>
 </body>
 </html>

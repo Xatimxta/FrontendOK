@@ -1,0 +1,19 @@
+.img-responsive{
+    width: 850px;
+    height: 315px;
+}
+body{
+    background-color: #ebf4ec;
+}
+#header{
+    background-color: #ffffff;
+}
+#botonesheader{
+    margin-top: 10px;
+}
+/*
+#logo{
+    width: 90px;
+    height: 45px;
+}
+*/
