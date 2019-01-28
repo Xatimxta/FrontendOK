@@ -1,0 +1,20 @@
+body{
+    background-color: #ebf4ec;
+}
+#header{
+    background-color: #ffffff;
+}
+#botonesheader{
+    margin-top: 10px;
+}
+
+#footer{
+    background-color: black;
+    color: #ffffff;
+}
+
+#cuadrologin{
+    background-color: #ffffff;
+    text-align: left;
+    border: 3px black groove;
+}
