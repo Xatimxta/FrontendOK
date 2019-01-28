@@ -9,11 +9,13 @@ import {FooterComponent} from './footer/footer.component';
 import {HomeComponent} from './home/home.component';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
+import { NewsComponent } from './news/news.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
+  { path: 'news', component: NewsComponent},
   { path: '**', component: HomeComponent}
 ]
 
@@ -24,7 +26,8 @@ const routes: Routes = [
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    NewsComponent
 
   ],
   imports: [
