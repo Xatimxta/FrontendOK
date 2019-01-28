@@ -3,20 +3,7 @@
     height: 315px;
     border: 3px black double;
 }
-body{
-    background-color: #ebf4ec;
-}
-#header{
-    background-color: #ffffff;
-}
-#botonesheader{
-    margin-top: 10px;
-}
 
-#footer{
-    background-color: black;
-    color: #ffffff;
-}
 /*
 #logo{
     width: 90px;
