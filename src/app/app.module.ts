@@ -10,12 +10,16 @@ import {HomeComponent} from './home/home.component';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import { NewsComponent } from './news/news.component';
+import { DropsComponent } from './drops/drops.component';
+import { UpcominginfoComponent } from './drops.upcoming.info/upcominginfo.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'news', component: NewsComponent},
+  { path: 'drops', component: DropsComponent},
+  { path: 'upcominginfo', component: UpcominginfoComponent},
   { path: '**', component: HomeComponent}
 ]
 
@@ -27,7 +31,9 @@ const routes: Routes = [
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    NewsComponent
+    NewsComponent,
+    DropsComponent,
+    UpcominginfoComponent
 
   ],
   imports: [
