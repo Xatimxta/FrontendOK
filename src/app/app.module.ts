@@ -12,6 +12,8 @@ import {RegisterComponent} from './register/register.component';
 import { NewsComponent } from './news/news.component';
 import { DropsComponent } from './drops/drops.component';
 import { UpcominginfoComponent } from './drops.upcoming.info/upcominginfo.component';
+import { ReleasedComponent } from './drops.released/released.component';
+import { ProxyComponent } from './proxy/proxy.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -20,6 +22,8 @@ const routes: Routes = [
   { path: 'news', component: NewsComponent},
   { path: 'drops', component: DropsComponent},
   { path: 'upcominginfo', component: UpcominginfoComponent},
+  { path: 'released', component: ReleasedComponent},
+  { path: 'proxy', component: ProxyComponent},
   { path: '**', component: HomeComponent}
 ]
 
@@ -33,7 +37,9 @@ const routes: Routes = [
     RegisterComponent,
     NewsComponent,
     DropsComponent,
-    UpcominginfoComponent
+    UpcominginfoComponent,
+    ReleasedComponent,
+    ProxyComponent
 
   ],
   imports: [
