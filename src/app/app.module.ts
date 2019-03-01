@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import {HeaderComponent} from './header/header.component';
@@ -14,6 +15,9 @@ import { DropsComponent } from './drops/drops.component';
 import { UpcominginfoComponent } from './drops.upcoming.info/upcominginfo.component';
 import { ReleasedComponent } from './drops.released/released.component';
 import { ProxyComponent } from './proxy/proxy.component';
+import { ProxypaymentComponent } from './proxypayment/proxypayment.component';
+
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -24,6 +28,7 @@ const routes: Routes = [
   { path: 'upcominginfo', component: UpcominginfoComponent},
   { path: 'released', component: ReleasedComponent},
   { path: 'proxy', component: ProxyComponent},
+  { path: 'proxypayment', component: ProxypaymentComponent},
   { path: '**', component: HomeComponent}
 ]
 
@@ -39,7 +44,8 @@ const routes: Routes = [
     DropsComponent,
     UpcominginfoComponent,
     ReleasedComponent,
-    ProxyComponent
+    ProxyComponent,
+    ProxypaymentComponent
 
   ],
   imports: [
