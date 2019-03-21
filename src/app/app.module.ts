@@ -17,6 +17,8 @@ import { UpcominginfoComponent } from './drops.upcoming.info/upcominginfo.compon
 import { ReleasedComponent } from './drops.released/released.component';
 import { ProxyComponent } from './proxy/proxy.component';
 import { ProxypaymentComponent } from './proxypayment/proxypayment.component';
+import { UsuariosComponent } from './login/prueba/usuarios.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -30,6 +32,7 @@ const routes: Routes = [
   { path: 'released', component: ReleasedComponent},
   { path: 'proxy', component: ProxyComponent},
   { path: 'proxypayment', component: ProxypaymentComponent},
+  { path: 'users', component: UsuariosComponent},
   { path: '**', component: HomeComponent}
 ]
 
@@ -46,14 +49,16 @@ const routes: Routes = [
     UpcominginfoComponent,
     ReleasedComponent,
     ProxyComponent,
-    ProxypaymentComponent
+    ProxypaymentComponent,
+    UsuariosComponent
 
   ],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule 
   ],
   exports: [
     RouterModule
