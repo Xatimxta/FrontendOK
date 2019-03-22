@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+    "target": "http://plugwalk.alwaysdata.net",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+    }
+    }

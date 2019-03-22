@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div style="text-align:center">
+  <h1>
+Practica 5
+  </h1>
+</div>
+  <button (click)="getProducte()">
+    MOSTRA Resposta
+  </button>
+
+
+<div *ngFor="let producte of productes; let i = index">
+    {{i}} {{usuario.resposta}}
+
+</div>
+
+<router-outlet></router-outlet>
