@@ -1,21 +1,44 @@
 export class Usuario{
     resposta:string="";
-    nombre:string="";
-    apellido:string="";
-    edad:number=0;
-    direccion:string="";
+    iduser:number;
+    name:string="";
+    surname:string="";
     birthdate:Date;
+    address: string="";
     email:string="";
     password:string="";
-    constructor(resposta:string="" , nombre:string="", apellido:string="", edad:number=0, direccion:string="", 
-    birthdate:Date, email:string="", password:string=""){
+    constructor(resposta:string="" , iduser:number, name:string="", surname:string="",
+    birthdate:Date,address:string="", email:string="", password:string=""){
         this.resposta=resposta;
-        this.nombre=nombre;
-        this.apellido=apellido;
-        this.edad=edad;
-        this.direccion=direccion;
+        this.iduser=iduser;
+        this.name=name;
+        this.surname=surname;
         this.birthdate=birthdate;
+        this.address=address;
         this.email=email;
         this.password=password;
     }
 }
+
+/*export class Usuario{
+    resposta:string="";
+    iduser:number;
+    name:string="";
+    surname:string="";
+    birthdate:Date;
+    address: string="";
+    email:string="";
+    password:string="";
+    constructor(resposta:string="" , iduser:number, name:string="", surname:string="",
+    birthdate:Date,address:string="", email:string="", password:string=""){
+        this.resposta=resposta;
+        this.iduser=iduser;
+        this.name=name;
+        this.surname=surname;
+        this.birthdate=birthdate;
+        this.address=address;
+        this.email=email;
+        this.password=password;
+    }
+}
+ */
