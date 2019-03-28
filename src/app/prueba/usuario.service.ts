@@ -20,7 +20,7 @@ import {Usuario} from './usuario';
   
   
     postProducte(product:Usuario):Observable<any>{
-      let url = "/apiProductos.php/producto/"
+      let url = "/api/index.php"
       return this.http.post(
         url,product, {headers:new HttpHeaders({ 'Content-Type':'application/json'})  }
       );
