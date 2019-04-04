@@ -1,40 +1,63 @@
 import { Component, OnInit } from "@angular/core";
 import { Injectable } from '@angular/core';
 
-import {Observable, ObservableInput} from 'rxjs';
-import {Usuario} from './usuario';
+import { Observable, ObservableInput } from 'rxjs';
+import { Usuario } from './usuario';
 import { UsuarioService } from "./usuario.service";
 @Component({
 
-    selector:'usuarios-tag',
-    templateUrl:'./usuarios.component.html',
-    styleUrls:['./usuarios.component.css'] ,
-    providers:[UsuarioService]  
+  selector: 'usuarios-tag',
+  templateUrl: './usuarios.component.html',
+  styleUrls: ['./usuarios.component.css'],
+  providers: [UsuarioService]
 
 })
 
-export class UsuariosComponent implements OnInit{
-  constructor(private serviceUser:UsuarioService ) { }
-    
+export class UsuariosComponent implements OnInit {
+  usuarios: Usuario[] = [];
+  nuevoUsuario: Usuario = new Usuario(null, "",
+    "birthdate:Date", new Date(), "", "");
+  mensajeErrorPrecio = "";
+  productes = "";
+
+  
+  constructor(private serviceUser: UsuarioService) { }
+
   ngOnInit(): void {
-   
-    this.getProducte();
+
+    //this.getProducte();
   }
-  getProducte(){
+  enviaFormulari() {
+    this.serviceUser.postProducte(this.nuevoUsuario).
+      subscribe(
+        (result) => {
+          console.log("----")
+          this.usuarios = result["resposta"];
+
+          console.log(this.usuarios);
+        },
+        (error) => { console.log(error) }
+      );
+
+  }
+  getProducte() {
     this.serviceUser.getProducte().subscribe(
-      (result) =>{
-         console.log(result);
-         },
-      (error) =>{ 
-        console.log(error); 
-       });
+      (result) => {
+        console.log(result["message"]);
+        this.usuarios = result["message"];
+
+      },
+      (error) => {
+        console.log(error);
+      });
   }
-    usuarios = {};
-    home={
-        title:"",
-        words:""
-    };
-    
+
+  home = {
+    title: "",
+    words: ""
+  };
+
+
 
 
 };
