@@ -2,16 +2,47 @@
 
 <div style="text-align:center">
   <h1>
-GET & POST
+    Get y Post
   </h1>
 </div>
+<form (ngSubmit)="enviaFormulari()">
+  Name:<input type="text" name="name"
+      #nomProducte="ngModel"  [(ngModel)]="nuevoUsuario.name"
+   pattern="[A-Za-z]{2,6}" />
+  <br />
+  Surname:<input type="text" name="preu" [(ngModel)]="nuevoUsuario.surname" />
+  <br />
+  Birthdate:<input type="date" name="birthdate"
+      #descrProducte="ngModel"
+      [(ngModel)]="nuevoUsuario.birthdate"/>
+  <br />
+  Address:<input type="text" name="address"
+      #addressProducte="ngModel"
+      [(ngModel)]="nuevoUsuario.address"/>
+  <br />
+  Email:<input type="email" name="email"
+      #emailProducte="ngModel"
+      [(ngModel)]="nuevoUsuario.email"/>
+  <br />
+  Password:<input type="password" name="password"
+      #passwordProducte="ngModel"
+      [(ngModel)]="nuevoUsuario.password"/>
+  <br />
+ 
+  <button type="submit">
+    AÑADE USUARIO
+  </button>
+</form>
+
   <button (click)="getProducte()">
     MOSTRA Resposta
   </button>
 
+<div id="users" >hola</div>
 
-<div *ngFor="let producte of productes; let i = index">
-    {{i}} {{usuario.name}}
+<div *ngFor="let usuario of usuarios; let i = index">
+    {{i}} {{usuario.name}} <br />
+    {{usuario.birthdate}}
 
 </div>
 
