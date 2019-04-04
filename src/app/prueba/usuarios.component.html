@@ -1,18 +1,29 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<div style="text-align:center">
-  <h1>
-GET & POST
-  </h1>
+<div class="container">
+  <div class="main">
+    <div style="text-align:center">
+      <h1>
+    GET & POST
+      </h1>
+    </div>
+    
+      <button (click)="getProducte()">
+        MOSTRA Usuaris
+      </button>
+    
+    
+    <div *ngFor="let producte of productes; let i = index">
+        <ul>
+          <li>{{i}} {{usuario.name}}</li>
+          <li>{{i}} {{usuario.surname}}</li>
+          <li>{{i}} {{usuario.birthdate}}</li>
+          <li>{{i}} {{usuario.address}}</li>
+          <li>{{i}} {{usuario.email}}</li>
+        </ul>
+    </div>
+    
+    <router-outlet></router-outlet>
+    
+  </div>
 </div>
-  <button (click)="getProducte()">
-    MOSTRA Resposta
-  </button>
-
-
-<div *ngFor="let producte of productes; let i = index">
-    {{i}} {{usuario.name}}
-
-</div>
-
-<router-outlet></router-outlet>

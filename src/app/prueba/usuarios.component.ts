@@ -14,6 +14,7 @@ import { UsuarioService } from "./usuario.service";
 })
 
 export class UsuariosComponent implements OnInit{
+  usuarios="";
   constructor(private serviceUser:UsuarioService ) { }
     
   ngOnInit(): void {
@@ -23,13 +24,14 @@ export class UsuariosComponent implements OnInit{
   getProducte(){
     this.serviceUser.getProducte().subscribe(
       (result) =>{
+        this.usuarios=result["message"];
          console.log(result);
          },
       (error) =>{ 
         console.log(error); 
        });
   }
-    usuarios = {};
+    usuarioss = {};
     home={
         title:"",
         words:""
