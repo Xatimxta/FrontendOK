@@ -1,29 +1,49 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<div class="container">
-  <div class="main">
-    <div style="text-align:center">
-      <h1>
-    GET & POST
-      </h1>
-    </div>
-    
-      <button (click)="getProducte()">
-        MOSTRA Usuaris
-      </button>
-    
-    
-    <div *ngFor="let producte of productes; let i = index">
-        <ul>
-          <li>{{i}} {{usuario.name}}</li>
-          <li>{{i}} {{usuario.surname}}</li>
-          <li>{{i}} {{usuario.birthdate}}</li>
-          <li>{{i}} {{usuario.address}}</li>
-          <li>{{i}} {{usuario.email}}</li>
-        </ul>
-    </div>
-    
-    <router-outlet></router-outlet>
-    
-  </div>
+<div style="text-align:center">
+  <h1>
+    Get y Post
+  </h1>
 </div>
+<form (ngSubmit)="enviaFormulari()">
+  Name:<input type="text" name="name"
+      #nomProducte="ngModel"  [(ngModel)]="nuevoUsuario.name"
+   pattern="[A-Za-z]{2,6}" />
+  <br />
+  Surname:<input type="text" name="preu" [(ngModel)]="nuevoUsuario.surname" />
+  <br />
+  Birthdate:<input type="date" name="birthdate"
+      #descrProducte="ngModel"
+      [(ngModel)]="nuevoUsuario.birthdate"/>
+  <br />
+  Address:<input type="text" name="address"
+      #addressProducte="ngModel"
+      [(ngModel)]="nuevoUsuario.address"/>
+  <br />
+  Email:<input type="email" name="email"
+      #emailProducte="ngModel"
+      [(ngModel)]="nuevoUsuario.email"/>
+  <br />
+  Password:<input type="password" name="password"
+      #passwordProducte="ngModel"
+      [(ngModel)]="nuevoUsuario.password"/>
+  <br />
+ 
+  <button type="submit">
+    AÑADE USUARIO
+  </button>
+</form>
+
+  <button (click)="getProducte()">
+    MOSTRA Resposta
+  </button>
+
+<div id="users" >hola</div>
+
+<div *ngFor="let usuario of usuarios; let i = index">
+    {{i}} {{usuario.name}} <br />
+    {{usuario.birthdate}}
+
+</div>
+
+<router-outlet></router-outlet>

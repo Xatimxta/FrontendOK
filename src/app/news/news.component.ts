@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { PostService } from "./news.service";
+import { Post } from './post';
 
 @Component({
 
@@ -11,9 +12,8 @@ import { PostService } from "./news.service";
 })
 
 export class NewsComponent {
-    news={
-        title:"",
-        words:""
-    };
+    news: Post[] = [];
+
+    constructor(private serviceUser: PostService) { }
 
 };

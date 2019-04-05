@@ -27,12 +27,11 @@ import {Usuario} from './usuario';
     }
   
     
-    deleteProducte(product:Usuario):Observable<any>{
+ /*   deleteProducte(product:Usuario):Observable<any>{
       let url = "/apiProductos.php/producto_delete/54"
       return this.http.post(
         url,product, {headers:new HttpHeaders({ 'Content-Type':'application/json'})  }
       );
-    }
+    }*/
   
   }
-  
