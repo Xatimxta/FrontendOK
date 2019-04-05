@@ -11,9 +11,26 @@ import { Post } from './post';
 
 })
 
-export class NewsComponent {
+export class NewsComponent implements OnInit {
     news: Post[] = [];
 
     constructor(private serviceUser: PostService) { }
+
+    ngOnInit(): void {
+
+        this.getProducte();
+      }
+
+      getProducte() {
+        this.serviceUser.getProducte().subscribe(
+          (result) => {
+            console.log(result["message"]);
+            this.news = result["message"];
+    
+          },
+          (error) => {
+            console.log(error);
+          });
+      }
 
 };

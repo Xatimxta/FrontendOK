@@ -11,15 +11,15 @@
                         <h3>Regístrate</h3>
                     </div>
                     <form (ngSubmit)="enviaFormulari()">
-                    Nombre: <input type="text" class="form-control" name="nombre" #nomProducte="ngModel"  [(ngModel)]="nuevoUsuario.name" pattern="[A-Za-z]{4,15}"><br/>
-                    Apellidos: <input type="text" class="form-control" name="apellido" [(ngModel)]="nuevoUsuario.surname" pattern="[A-Za-z]{4,15}"><br/>
-                    Fecha nacimiento: <input type="date" class="form-control" name="fechanacimiento" #descrProducte="ngModel"
+                    Nombre: <input type="text" class="form-control" name="name" #nomProducte="ngModel"  [(ngModel)]="nuevoUsuario.name" pattern="[A-Za-z]{4,15}"><br/>
+                    Apellidos: <input type="text" class="form-control" name="surname" [(ngModel)]="nuevoUsuario.surname" pattern="[A-Za-z]{4,15}"><br/>
+                    Fecha nacimiento: <input type="date" class="form-control" name="birthdate" #descrProducte="ngModel"
                     [(ngModel)]="nuevoUsuario.birthdate"><br/>
-                    Dirección: <input type="text" class="form-control" name="direccion" #addressProducte="ngModel"
-                    [(ngModel)]="nuevoUsuario.address" pattern="{4,20}"><br/>
-                    Email: <input type="email" class="form-control" name="fechanacimiento" #emailProducte="ngModel"
+                    Dirección: <input type="text" class="form-control" name="address" #addressProducte="ngModel"
+                    [(ngModel)]="nuevoUsuario.address" ><br/>
+                    Email: <input type="email" class="form-control" name="email" #emailProducte="ngModel"
                     [(ngModel)]="nuevoUsuario.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"><br/>
-                    Contraseña: <input type="password" class="form-control" #passwordProducte="ngModel"
+                    Contraseña: <input type="password" class="form-control" name="password" #passwordProducte="ngModel"
                     [(ngModel)]="nuevoUsuario.password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"><br/>
                     <button type="submit">Regístrate</button>
                     </form>
