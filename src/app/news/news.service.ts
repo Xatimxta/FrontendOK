@@ -11,8 +11,8 @@ import {Post} from './post';
   export class PostService {
   
     constructor(private http:HttpClient) { }
-    getProducte(): Observable<any> { 
-      let url = "/api/index.php"; 
+    getNews(): Observable<any> { 
+      let url = "/api/indexPost.php"; 
       return this.http.get(
          url, { headers: new HttpHeaders({ 'Content-Type':'application/json'}) } 
          ); 
@@ -20,15 +20,7 @@ import {Post} from './post';
   
   
     postProducte(product:Post):Observable<any>{
-      let url = "/api/index.php"
-      return this.http.post(
-        url,product, {headers:new HttpHeaders({ 'Content-Type':'application/json'})  }
-      );
-    }
-  
-    
-    deleteProducte(product:Post):Observable<any>{
-      let url = "/apiProductos.php/producto_delete/54"
+      let url = "/api/indexPost.php"
       return this.http.post(
         url,product, {headers:new HttpHeaders({ 'Content-Type':'application/json'})  }
       );

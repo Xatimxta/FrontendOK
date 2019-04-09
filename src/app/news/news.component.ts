@@ -18,14 +18,14 @@ export class NewsComponent implements OnInit {
 
     ngOnInit(): void {
 
-        this.getProducte();
+        this.getNews();
       }
 
-      getProducte() {
-        this.serviceUser.getProducte().subscribe(
+      getNews() {
+        this.serviceUser.getNews().subscribe(
           (result) => {
-            console.log(result["message"]);
-            this.news = result["message"];
+            console.log(result["data"]);
+            this.news = result["data"];
     
           },
           (error) => {
