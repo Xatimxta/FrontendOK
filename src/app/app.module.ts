@@ -12,6 +12,7 @@ import {HomeComponent} from './home/home.component';
 import {LoginComponent} from './login/login.component';
 import {RegisterComponent} from './register/register.component';
 import { NewsComponent } from './news/news.component';
+import { AddNewsComponent } from './addnews/addnews.component';
 import { DropsComponent } from './drops/drops.component';
 import { UpcominginfoComponent } from './drops.upcoming.info/upcominginfo.component';
 import { ReleasedComponent } from './drops.released/released.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'news', component: NewsComponent},
+  { path: 'addnews', component: AddNewsComponent},
   { path: 'drops', component: DropsComponent},
   { path: 'upcominginfo', component: UpcominginfoComponent},
   { path: 'released', component: ReleasedComponent},
@@ -46,6 +48,7 @@ const routes: Routes = [
     LoginComponent,
     RegisterComponent,
     NewsComponent,
+    AddNewsComponent,
     DropsComponent,
     UpcominginfoComponent,
     ReleasedComponent,

@@ -14,7 +14,7 @@ import { Post } from './post';
 export class NewsComponent implements OnInit {
     news: Post[] = [];
 
-    constructor(private serviceUser: PostService) { }
+    constructor(private serviceNews: PostService) { }
 
     ngOnInit(): void {
 
@@ -22,7 +22,7 @@ export class NewsComponent implements OnInit {
       }
 
       getNews() {
-        this.serviceUser.getNews().subscribe(
+        this.serviceNews.getNews().subscribe(
           (result) => {
             console.log(result["data"]);
             this.news = result["data"];

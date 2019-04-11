@@ -19,10 +19,10 @@ import {Post} from './post';
         }
   
   
-    postProducte(product:Post):Observable<any>{
+    postNew(newpost:Post):Observable<any>{
       let url = "/api/indexPost.php"
       return this.http.post(
-        url,product, {headers:new HttpHeaders({ 'Content-Type':'application/json'})  }
+        url,newpost, {headers:new HttpHeaders({ 'Content-Type':'application/json'})  }
       );
     }
   

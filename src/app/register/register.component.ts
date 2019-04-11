@@ -15,10 +15,7 @@ import { UsuarioService } from './usuario.service';
 export class RegisterComponent{
     usuarios: Usuario[] = [];
   nuevoUsuario: Usuario = new Usuario(null, "",
-    "", new Date(), "", "");
-  mensajeErrorPrecio = "";
-  productes = "";
-
+    "", new Date(), "", "","");
   
   constructor(private serviceUser: UsuarioService) { }
 
