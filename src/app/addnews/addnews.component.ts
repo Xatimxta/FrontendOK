@@ -15,7 +15,7 @@ export class AddNewsComponent {
     news: Post[] = [];
     
 
-    nuevoPost : Post = new Post(null, "",new Date(), null, "", "" );
+    nuevoPost : Post = new Post(null, "",new Date(), 4, "", "" );
 
     constructor(private serviceUser: PostService) { }
 
@@ -24,9 +24,12 @@ export class AddNewsComponent {
           subscribe(
             (result) => {
               console.log("----")
-              this.news = result["resposta"];
+              // Devuelve el parametro en JSON del PHP.
+             // this.news = result["resposta"];
     
-              console.log(this.news);
+              //console.log(this.news);
+
+              console.log(result);
             },
             (error) => { console.log(error) }
           );

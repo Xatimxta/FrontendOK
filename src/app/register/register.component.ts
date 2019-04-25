@@ -24,9 +24,7 @@ export class RegisterComponent{
       subscribe(
         (result) => {
           console.log("----")
-          this.usuarios = result["resposta"];
-
-          console.log(this.usuarios);
+          console.log(result);
         },
         (error) => { console.log(error) }
       );
