@@ -28,18 +28,22 @@
                     </div>
                 </div>
                 <div class="row" style="padding: 20px 80px 20px 80px ">
+                    <form #formExemple="ngForm" (ngSubmit)="enviaForm(); formExemple.reset()">
                         <div class="col-5">
-                            Correo electrónico: <input class="form-control" id="email" type="text" style="margin-bottom: 0.5rem">
+                            Correo electrónico: <input class="form-control" id="email" name="email" type="text" style="margin-bottom: 0.5rem" pattern="[A-Za-z]{3,10}" #userForm="ngModel" [(ngModel)]="usu.nom">
                             Contraseña: <input class="form-control" id="password" type="password" style="margin-bottom: 0.5rem">
                         </div>
                         <div class="col-12">
-                            <button (click)="login()" class="btn btn-outline-primary btn-block" id="login">Iniciar
-                                Sesión</button>
+                                <button type="submit" id="login" (click)="login()" class="btn btn-outline-primary btn-block" [disabled]="!formExemple.form.valid">
+                                        LOGIN
+                                        </button>
                         </div>
+                        <div id="test"></div>
                         <div class="col-md-12">
                             <span class="glyphicon glyphicon-user"><a routerLink="/register">No tienes cuenta?
                                     Registrate</a></span>
                         </div>
+                    </form>
                 </div>
             </div>
         </div>
