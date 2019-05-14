@@ -19,6 +19,7 @@ import { ReleasedComponent } from './drops.released/released.component';
 import { ProxyComponent } from './proxy/proxy.component';
 import { ProxypaymentComponent } from './proxypayment/proxypayment.component';
 import { UsuariosComponent } from './prueba/usuarios.component';
+import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'proxy', component: ProxyComponent},
   { path: 'proxypayment', component: ProxypaymentComponent},
   { path: 'users', component: UsuariosComponent},
+  { path: 'profile', component: ProfileComponent},
   { path: '**', component: HomeComponent}
 ]
 
@@ -54,7 +56,8 @@ const routes: Routes = [
     ReleasedComponent,
     ProxyComponent,
     ProxypaymentComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    ProfileComponent
 
   ],
   imports: [

@@ -21,7 +21,9 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "@ionic/app-scripts": "^3.2.2",
+    "@types/jwt-decode": "^2.2.1",
     "core-js": "^2.5.4",
+    "jwt-decode": "^2.2.0",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },
