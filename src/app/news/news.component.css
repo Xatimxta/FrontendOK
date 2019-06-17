@@ -1,0 +1,44 @@
+.items {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.items h3 {
+  margin-top: 0;
+  text-transform: capitalize;
+}
+
+.items img{
+  /* width: 280px; */
+  height: 200px;
+  margin-right: 20px;
+  box-shadow: 0 0 2px black;
+}
+
+.items .item-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.paginator {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.page {
+  background: none;
+  border-radius: 10px;
+  margin-right: 5px;
+}
+
+.page .active {
+  background: red;
+}
