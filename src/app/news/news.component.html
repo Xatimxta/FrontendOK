@@ -2,41 +2,46 @@
 <br /><br />
 <!-- Body-->
 <div class="container">
-    <section class="main row">
-        <div id="botonesheader">
-            <article class="col-md-4 col-md-offset-1">
-                <div class="btn-group-xs">
-                    <button class="btn btn-default"><a routerLink="/news">Last</a></button>
-                    <button class="btn btn-default"><a routerLink="/news">Popular</a></button>
-                </div>
-            </article>
-            <br/><br/>
+  <section class="main row">
+    <div id="botonesheader">
+      <article class="col-md-4 col-md-offset-1">
+        <div class="btn-group-xs">
+          <button class="btn btn-default"><a routerLink="/news">Last</a></button>
+          <button class="btn btn-default"><a routerLink="/news">Popular</a></button>
         </div>
+      </article>
+      <br /><br />
+    </div>
 
-          <!--<div *ngFor="let item of news; let i = index">
+    <!--<div *ngFor="let item of news; let i = index">
             {{i}} {{news.topic}} <br />
             {{news.date}}
             {{news.title}}
             {{news.body}}
-        
-        </div>-->
-        <button class="btn btn-default"><a routerLink="/addnews">Add News</a></button>
 
-        <article class="col-md-12" *ngFor="let item of news; let i = index">
-            <article class="col-md-4">
-                <img class="img-responsive" [src]="item.url_post" />
-            </article>
-            <article class="col-md-7">
-                    <h3>{{item.title}}</h3>
-                    <p>
-                            {{item.body}}
-                    </p>
-            </article>
-            <br/><br/>
-        </article>
-        
-    </section>
+        </div>-->
+    <button class="btn btn-default"><a routerLink="/addnews">Add News</a></button>
+
+    <ul class="paginator">
+      <li class="page" *ngFor="let cPageNumber of totalPagesInPaginator">
+        <button (click)="setCurrentPage(cPageNumber)"
+          [ngClass]="(cPageNumber==currentPage)?'active':''">{{cPageNumber + 1}}</button>
+      </li>
+    </ul>
+
+    <ul class="items">
+      <li class="item-wrapper" *ngFor="let item of news; let i = index">
+        <img class="" [src]="item.url_post" />
+        <div class="item-description">
+          <h3>{{item.title}}</h3>
+          <p>
+            {{item.body}}
+          </p>
+        </div>
+      </li>
+    </ul>
+
+
+  </section>
 </div>
 <br /><br />
-
-<!--Footer-->
